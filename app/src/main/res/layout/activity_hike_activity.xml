@@ -1,49 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
-    <RelativeLayout
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hike_p" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.android.thedayofftripguide.hike_activity"
-        android:layout_margin="16dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hike"
-            android:layout_centerInParent="true"
-            android:id="@+id/hikeImage"/>
+        android:background="@color/colorPrimary">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/hikeHeader"
-            android:text="@string/hikeHeader"
-            android:layout_alignParentTop="true"
-            android:textSize="18sp"
-            android:textColor="@color/textColor1"/>
-        <TextView
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/hikeThingsHeader"
-            android:layout_below="@+id/hikeImage"
-            android:text="@string/hikeThingsHeader"
-            android:textSize="24sp"
-            android:textColor="@color/textColor1"/>
-        <TextView
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/hikeThingsHeader"
-            android:text="@string/hikeThings"
-            android:textSize="16sp"
-            android:textColor="@color/textColor1"/>
-    </RelativeLayout>
-</ScrollView>
+            android:layout_margin="16dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.example.android.thedayofftripguide.hike_activity">
+
+
+            <TextView
+                android:id="@+id/hikeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:text="@string/hikeHeader"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/hikeThingsHeader"
+                style="@style/HeaderStyle"
+                android:layout_below="@+id/hikeHeader"
+                android:text="@string/ThingsHeader" />
+
+            <TextView
+                android:id="@+id/hikeThingsText"
+                style="@style/ListStyle"
+                android:layout_below="@+id/hikeThingsHeader"
+                android:text="@string/hikeThings" />
+
+            <!-- LOCATIONS -->
+
+            <TextView
+                android:id="@+id/locationsHeader"
+                style="@style/HeaderStyle"
+                android:layout_below="@+id/hikeThingsText"
+                android:text="Interesting locations:" />
+            <!-- LOCATION 1 -->
+            <TextView
+                android:id="@+id/location1Text"
+                style="@style/ListStyle"
+                android:layout_below="@+id/locationsHeader"
+                android:text="1. Mountain Pip Ivan Chornohirskyi (2028 m) from Dzembronya. Distance:10.5 km. Difficulty: intermediate. Time - 5 hours (1 or 2 days)." />
+
+            <LinearLayout
+                android:id="@+id/details1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location1Text"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/location1map"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location1map"
+                    android:text="@string/map" />
+
+                <Button
+                    android:id="@+id/location1detail"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location1detail"
+                    android:text="@string/details" />
+            </LinearLayout>
+
+            <!-- LOCATION 2 -->
+
+            <TextView
+                android:id="@+id/location2Text"
+                style="@style/ListStyle"
+                android:layout_below="@+id/details1"
+                android:text="2. Mountain G'rofa (1748 m) from Osmoloda station. Distance:11 km. Difficulty: intermediate. Time - 4 hours (1 or 2 days)." />
+
+            <LinearLayout
+                android:id="@+id/details2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location2Text"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/location2map"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location2map"
+                    android:text="@string/map" />
+
+                <Button
+                    android:id="@+id/location2detail"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location2detail"
+                    android:text="@string/details" />
+            </LinearLayout>
+
+            <!-- LOCATION 3
+
+            <TextView
+                android:id="@+id/location3Text"
+                style="@style/ListStyle"
+                android:layout_below="@+id/details2"
+                android:text="3. Parks of Chernihiv region. Distance - 76 km. Asphalt - 30%. Soil - 70%" />
+
+            <LinearLayout
+                android:id="@+id/details3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location3Text"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/location3map"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location3map"
+                    android:text="@string/map" />
+
+                <Button
+                    android:id="@+id/location3detail"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location3detail"
+                    android:text="@string/details" />
+            </LinearLayout>
+            -->
+
+            <!-- LINKS -->
+
+            <TextView
+                android:id="@+id/linksHeader"
+                style="@style/HeaderStyle"
+                android:layout_below="@+id/details2"
+                android:text="Helpful resources:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linksHeader"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/link1Text"
+                    style="@style/ListStyle"
+                    android:layout_below="@+id/linksHeader"
+                    android:layout_weight="1"
+                    android:onClick="goLink1"
+                    android:text="@string/hikeLink1"
+                    android:textStyle="" />
+
+                <TextView
+                    android:id="@+id/link2Text"
+                    style="@style/ListStyle"
+                    android:layout_below="@+id/linksHeader"
+                    android:layout_weight="1"
+                    android:onClick="goLink2"
+                    android:text="@string/hikeLink2"
+                    android:textStyle="" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

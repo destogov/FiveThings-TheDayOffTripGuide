@@ -1,49 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.android.thedayofftripguide.bike_activity"
-    android:layout_margin="16dp">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bicycle"
-        android:layout_centerInParent="true"
-        android:id="@+id/bikeImage"/>
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
-    <TextView
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/touring_p" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/bikeHeader"
-        android:text="@string/bikeHeader"
-        android:layout_alignParentTop="true"
-        android:textSize="18sp"
-        android:textColor="@color/textColor1"/>
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/bikeThingsHeader"
-        android:layout_below="@+id/bikeImage"
-        android:text="@string/bikeThingsHeader"
-        android:textSize="24sp"
-        android:textColor="@color/textColor1"/>
-    <TextView
-        android:layout_marginTop="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/bikeThingsHeader"
-        android:text="@string/bikeThings"
-        android:textSize="16sp"
-        android:textColor="@color/textColor1"/>
-</RelativeLayout>
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.example.android.thedayofftripguide.bike_activity">
+
+
+            <TextView
+                android:id="@+id/bikeHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:text="@string/bikeHeader"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/bikeThingsHeader"
+                style="@style/HeaderStyle"
+                android:layout_below="@+id/bikeHeader"
+                android:text="@string/ThingsHeader" />
+
+            <TextView
+                android:id="@+id/bikeThingsText"
+                style="@style/ListStyle"
+                android:layout_below="@+id/bikeThingsHeader"
+                android:text="@string/bikeThings" />
+            <!-- LOCATIONS -->
+            <TextView
+                android:id="@+id/locationsHeader"
+                style="@style/HeaderStyle"
+                android:layout_below="@+id/bikeThingsText"
+                android:text="Interesting locations:" />
+            <!-- LOCATION 1 -->
+            <TextView
+                android:id="@+id/location1Text"
+                style="@style/ListStyle"
+                android:layout_below="@+id/locationsHeader"
+                android:text="1. Kyiv region. Fastiv - Korosttyshiv -  Teteriv \'Three careers\'. Distance - 163 km. Asphalt - 50%. Soil - 50%" />
+
+            <LinearLayout
+                android:id="@+id/details1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location1Text"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/location1map"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location1map"
+                    android:text="@string/map" />
+
+                <Button
+                    android:id="@+id/location1detail"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location1detail"
+                    android:text="@string/details" />
+            </LinearLayout>
+
+            <!-- LOCATION 2 -->
+
+            <TextView
+                android:id="@+id/location2Text"
+                style="@style/ListStyle"
+                android:layout_below="@+id/details1"
+                android:text="2. Kyiv region. Myronivka - Medvin (Totoha) - Buky. Distance - 104 km. Asphalt - 90%. Soil - 10%" />
+
+            <LinearLayout
+                android:id="@+id/details2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location2Text"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/location2map"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location2map"
+                    android:text="@string/map" />
+
+                <Button
+                    android:id="@+id/location2detail"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location2detail"
+                    android:text="@string/details" />
+            </LinearLayout>
+
+            <!-- LOCATION 3 -->
+
+            <TextView
+                android:id="@+id/location3Text"
+                style="@style/ListStyle"
+                android:layout_below="@+id/details2"
+                android:text="3. Parks of Chernihiv region. Distance - 76 km. Asphalt - 30%. Soil - 70%" />
+
+            <LinearLayout
+                android:id="@+id/details3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location3Text"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/location3map"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location3map"
+                    android:text="@string/map" />
+
+                <Button
+                    android:id="@+id/location3detail"
+                    style="@style/ButtonStyle"
+                    android:layout_weight="1"
+                    android:onClick="location3detail"
+                    android:text="@string/details" />
+            </LinearLayout>
+
+            <!-- LINKS -->
+
+            <TextView
+                android:id="@+id/linksHeader"
+                style="@style/HeaderStyle"
+                android:layout_below="@+id/details3"
+                android:text="Helpful resources:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linksHeader"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/link1Text"
+                    style="@style/ListStyle"
+                    android:layout_below="@+id/linksHeader"
+                    android:layout_weight="1"
+                    android:onClick="goLink1"
+                    android:text="@string/bikeLink1"
+                    android:textStyle="" />
+
+                <TextView
+                    android:id="@+id/link2Text"
+                    style="@style/ListStyle"
+                    android:layout_below="@+id/linksHeader"
+                    android:layout_weight="1"
+                    android:onClick="goLink2"
+                    android:text="@string/bikeLink2"
+                    android:textStyle="" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
     </ScrollView>
+</LinearLayout>

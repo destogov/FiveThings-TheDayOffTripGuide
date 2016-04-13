@@ -1,6 +1,15 @@
 <resources>
+    <!--GENERAL -->
     <string name="app_name">The DayOff Trip Guide</string>
+
+    <string name="ThingsHeader">Top 5 of necessary stuff:</string>
+
     <string name="mainActivityHeader">Chose the activity which you wish to perform to read something about it:</string>
+
+    <string name="map">SEE ON MAP</string>
+    <string name="details">DETAILS</string>
+
+    <!-- BIKE STRINGS-->
         <string name="bikeHeader">
         Bicycle touring means self-contained cycling
         trips for pleasure, adventure and autonomy rather than sport,
@@ -8,9 +17,14 @@
         even years. Tours may be planned by the participant or organised by a holiday
         business, a club, or a charity as a fund-raising venture.
         </string>
-        <string name="bikeThingsHeader">Five things you must take in a trip:</string>
+    <string name="bikeThingsHeader">Five things you must take in a trip:</string>
         <string name="bikeThings">1. Hand Pump; \n2. Toolkit; \n3. Front and Rear Light; \n4.
         Protection (gloves, helmet, glasses); \n5. Map/GPS </string>
+    <string name="bikeLink1"><u>1. Velorout.com.ua - Your guide to the world of independent bike tours</u></string>
+    <string name="bikeLink2"><u>2. Forum velokyiv.com </u></string>
+
+    <!-- HIKE STRINGS-->
+
 
     <string name="HikeHeader">Chose the activity which you wish to perform to read something about it:</string>
         <string name="hikeHeader">
@@ -18,27 +32,35 @@
             It is a popular activity with numerous hiking organizations worldwide,
             and studies suggest that all forms of walking have health benefits.
         </string>
-        <string name="hikeThingsHeader">Five things you must take in a trip:</string>
+    <string name="hikeThingsHeader">Five things you must take in a trip:</string>
         <string name="hikeThings">1. Backpack; \n2. Sleeping bag; \n3. Food hub; \n4.
         Comfortable shoes; \n5. Map/GPS  </string>
+    <string name="hikeLink1"><u>1. МАНДРУЙ ВПЕВНЕНО! Путівник Українськими Карпатами</u></string>
+    <string name="hikeLink2"><u>2. Снаряжение для туризма и активного отдыха BESKID (индивидуальный пошив туристического снаряжения или специальных чехлов) </u></string>
 
+
+    <!-- CAMP STRINGS -->
         <string name="campHeader">
             Camping is an elective outdoor recreational activity. Generally held, participants leave developed
             areas to spend time outdoors in more natural ones in pursuit of activities providing them enjoyment.
             To be regarded as "camping" a minimum of one night is spent outdoors, distinguishing it from day-tripping,
             picnicking, and other similarly short-term recreational activities. Camping can be enjoyed through all four seasons.
         </string>
-        <string name="campThingsHeader">Five things you must take in a trip:</string>
+
         <string name="campThings">1. Fire; \n2. Sleeping bag and tent; \n3. Tools (like knife, axe, dishes etc.); \n4.
         Protection of the insects and animals; \n5. Book or music  </string>
+    <string name="campLink1"><u>1. http://moveyourass.com.ua/ - Top-10 of non widely known places in Ukraine, where you need to go on weekend.</u></string>
+    <string name="campLink2"><u>2. General Kosmosa LiveJournal - Weekend Tours reports</u></string>
 
-
+    <!--SNB STRINGS -->
         <string name="snbHeader">
             Snowboarding is a recreational activity and olympic sport
             that involves descending a slope that is covered with snow while standing on a
             snowboard attached to a rider\'s feet.
         </string>
-        <string name="snbThingsHeader">Five things you must take in a trip:</string>
+    <string name="snbThingsHeader">Five things you must take in a trip:</string>
         <string name="snbThings">1. Fire; \n2. Toolkit; \n3. Strategic food hub (chocolate etc.); \n4.
         Protection and additional clothes (gloves, helmet, glasses); \n5. Charged mobile phone with GPS </string>
+    <string name="snbLink1"><u>1. snig.info - All webcams in the Ukrainian mountains</u></string>
+    <string name="snbLink2"><u>2. Forum snowboarding.com.ua</u></string>
 </resources>
