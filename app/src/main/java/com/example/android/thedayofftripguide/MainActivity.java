@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         OnClickButtonListener();
     }
+
     public void OnClickButtonListener() {
         goSnb = (Button) findViewById(R.id.snbButton);
         goSnb.setOnClickListener(
@@ -66,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
 
 
     }
