@@ -1,5 +1,5 @@
 ﻿# FiveThings-TheDayOffTripGuide
-GDG / Udacity Android for Beginners Final project Rev.0 (styling and functionality will be added)
+GDG / Udacity Android for Beginners Final project Rev.1 / (styling and functionality will be added - done)
 
 The project purpose is to provide user with information regarding types of active sports which they can perform on weekend or day off. 
 
